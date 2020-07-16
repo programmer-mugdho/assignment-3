@@ -5,7 +5,7 @@ function feetToMile(feet) {
     if (feet < 0) {
         return "Distance can't be a negative number";
     }
-    var mile = feet / 5280; // 1 mile = 5280 feet
+    const mile = feet / 5280; // 1 mile = 5280 feet
     return mile;
 }
 
@@ -20,7 +20,7 @@ function woodCalculator(chair, table, bed) {
     }
     else {
         // chair, table and bed needs 1, 3 and 5 cubic feet wood respectively.
-        var wood = chair * 1 + table * 3 + bed * 5;
+        const wood = chair * 1 + table * 3 + bed * 5;
         return wood;
     }
 }
@@ -31,7 +31,7 @@ function woodCalculator(chair, table, bed) {
  * in a building and returns the number of
  * bricks in that building. */
 function brickCalculator(storey) {
-    var feet = 0;
+    let feet = 0;
     if (storey < 0) {
         return "Storey number can't be a negative number"
     }
@@ -46,7 +46,7 @@ function brickCalculator(storey) {
         storey -= 20;
         feet += 10 * 15 + 10 * 12 + storey * 10; // storeys getter than 20 = 10 feet.
     }
-    var bricks = feet * 1000; // 1000 bricks per foot.
+    const bricks = feet * 1000; // 1000 bricks per foot.
     return bricks;
 }
 
@@ -58,7 +58,7 @@ function tinyFriend(friends) {
     if (friends.length == 0) {
         return "Array can't be empty."
     }
-    var name = friends[0];
+    let name = friends[0];
     for (var i = 0; i < friends.length; i++) {
         var element = friends[i] // element is the name of friend for each iteration.
         if (element.length < name.length) {
